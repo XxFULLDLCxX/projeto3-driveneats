@@ -62,6 +62,8 @@ function cancelOrder() {
     third_choice.classList.remove('btn-select');
 
     btn_finish.classList.remove('btn-active');
+    btn_finish.innerHTML = `Selecione os 3 itens <br> para fechar o pedido`;
+    btn_finish.setAttribute('disabled', '');
 
 }
 
