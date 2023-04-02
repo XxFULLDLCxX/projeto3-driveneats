@@ -190,7 +190,7 @@ footer .fixed {
     height: 92px;
 }
 
-footer>div>div {
+footer .fixed > div {
     height: 100%;
     background-color: #FFFFFF;
 }

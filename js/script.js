@@ -6,16 +6,17 @@ function getBtn(btn_class, scope_class) {
     if (btn_selected !== null) {
         btn_selected.classList.toggle('btn-select');
     }
-    first_choice = document.querySelector('.first .btn-select');
-    second_choice = document.querySelector('.second .btn-select');
-    third_choice = document.querySelector('.third .btn-select');
+    const first_choice = document.querySelector('.first .btn-select');
+    const second_choice = document.querySelector('.second .btn-select');
+    const third_choice = document.querySelector('.third .btn-select');
 
-    n_select = document.querySelectorAll('.btn-select').length;
-    btn_finish.innerHTML = `Selecione os ${3 - n_select} itens <br> para fechar o pedido`;
+    const n_select = document.querySelectorAll('.btn-select').length;
+    const choices_number = 3;  // No magic number three hahahah.
+    btn_finish.innerHTML = `Selecione os ${choices_number - n_select} itens <br> para fechar o pedido`;
 
-    console.log([first_choice, second_choice, third_choice])
+    console.log([first_choice, second_choice, third_choice]);
     if (first_choice !== null && second_choice !== null && third_choice !== null) {
-        btn_finish.classList.add('btn-active')
+        btn_finish.classList.add('btn-active');
         btn_finish.textContent = "Fechar pedido";
         btn_finish.removeAttribute('disabled');
     }
@@ -35,26 +36,26 @@ function finishOrder(btn) {
         confirm_order.querySelector('.second .price').textContent = second_selected.querySelector('.price').textContent;
         confirm_order.querySelector('.third .price').textContent = third_selected.querySelector('.price').textContent;
 
-        dish_price = Number(first_selected.querySelector('.price').textContent.replace(',', '.'));
-        drink_price = Number(second_selected.querySelector('.price').textContent.replace(',', '.'));
-        dessert_price = Number(third_selected.querySelector('.price').textContent.replace(',', '.'));
+        const dish_price = Number(first_selected.querySelector('.price').textContent.replace(',', '.'));
+        const drink_price = Number(second_selected.querySelector('.price').textContent.replace(',', '.'));
+        const dessert_price = Number(third_selected.querySelector('.price').textContent.replace(',', '.'));
 
-        console.log(dish_price)
-        console.log(drink_price)
-        console.log(dessert_price)
+        console.log(dish_price);
+        console.log(drink_price);
+        console.log(dessert_price);
 
-        let sum_prices = dish_price + drink_price + dessert_price
-        
+        const sum_prices = dish_price + drink_price + dessert_price;
+
         confirm_order.querySelector('.order-total .price').textContent = sum_prices.toFixed(2).replace('.', ',');
-    } 
+    }
 }
 
 function cancelOrder() {
     confirm_order.classList.toggle('finish');
 
-    first_choice = document.querySelector('.first .btn-select');
-    second_choice = document.querySelector('.second .btn-select');
-    third_choice = document.querySelector('.third .btn-select');
+    const first_choice = document.querySelector('.first .btn-select');
+    const second_choice = document.querySelector('.second .btn-select');
+    const third_choice = document.querySelector('.third .btn-select');
 
     first_choice.classList.remove('btn-select');
     second_choice.classList.remove('btn-select');
@@ -65,15 +66,15 @@ function cancelOrder() {
 }
 
 function confirmOrder() {
-    order_message = `Olá, gostaria de fazer o pedido:
+    const order_message = `Olá, gostaria de fazer o pedido:
     - Prato: ${confirm_order.querySelector('.first .name').textContent}
     - Bebida: ${confirm_order.querySelector('.second .name').textContent}
     - Sobremesa: ${confirm_order.querySelector('.third .name').textContent}
     Total: R$ ${confirm_order.querySelector('.order-total .price').textContent}
-    
+
     Nome: ${prompt('nome')}
     Endereço: ${prompt('endereço')}`;
-    
+
     // A test without the tag a
     window.open(`https://wa.me/?text=${encodeURIComponent(order_message)}`);
 }
