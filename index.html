@@ -32,36 +32,46 @@
                 <div class="food-choices">
                     <h2>Primeiro, seu prato principal</h2>
                     <div class="y-center first">
-                        <button data-test="dish" class="food btn-0" onclick="getBtn('.btn-0', '.first')">
-                            <img src="assets/vegan burger-2.jpeg" alt="" srcset="">
-                            <h3 data-test="item-name" class="name">Hambúguer Vegano</h3>
-                            <p>Queijo, Soja, Alface, Tomate, Pão Integral</p>
-                            <h5 data-test="item-price" class="price">22,59</h5>
-                        </button>
-                        <button data-test="dish" class="food btn-1" onclick="getBtn('.btn-1', '.first')">
-                            <img src="assets/main course.jpeg" alt="" srcset="">
-                            <h3 data-test="item-name" class="name">Bife, Feijão, Arroz</h3>
-                            <p>Carne, Feijão, Arroz com Torta de Batata</p>
-                            <h5 data-test="item-price" class="price">37,20</h5>
-                        </button>
-                        <button data-test="dish" class="food btn-2" onclick="getBtn('.btn-2', '.first')">
-                            <img src="assets/vegan burger.jpeg" alt="" srcset="">
-                            <h3 data-test="item-name" class="name">Hambúguer Vegano</h3>
-                            <p>Cebola Fritada, Soja, Alface e Pão Integral</p>
-                            <h5 data-test="item-price" class="price">25,75</h5>
-                        </button>
-                        <button data-test="dish" class="food btn-3" onclick="getBtn('.btn-3', '.first')">
-                            <img src="assets/main course-2.jpeg" alt="" srcset="">
-                            <h3 data-test="item-name" class="name">Bife com Arroz</h3>
-                            <p>Carne, Ervilha, com Torta de Arroz</p>
-                            <h5 data-test="item-price" class="price">33,50</h5>
-                        </button>
-                        <button data-test="dish" class="food btn-4" onclick="getBtn('.btn-4', '.first')">
-                            <img src="assets/chicken plate-2.jpeg" alt="" srcset="">
-                            <h3 data-test="item-name" class="name">Prato de Frango</h3>
-                            <p>Frango Assado</p>
-                            <h5 data-test="item-price" class="price">43,25</h5>
-                        </button>
+                        <div data-test="dish">
+                            <button class="food btn-0" onclick="getBtn('.btn-0', '.first')">
+                                <img src="assets/vegan burger-2.jpeg" alt="" srcset="">
+                                <h3 data-test="item-name" class="name">Hambúguer Vegano</h3>
+                                <p>Queijo, Soja, Alface, Tomate, Pão Integral</p>
+                                <h5 data-test="item-price" class="price">22,59</h5>
+                            </button>
+                        </div>
+                        <div data-test="dish">
+                            <button class="food btn-1" onclick="getBtn('.btn-1', '.first')">
+                                <img src="assets/main course.jpeg" alt="" srcset="">
+                                <h3 data-test="item-name" class="name">Bife, Feijão, Arroz</h3>
+                                <p>Carne, Feijão, Arroz com Torta de Batata</p>
+                                <h5 data-test="item-price" class="price">37,20</h5>
+                            </button>
+                        </div>
+                        <div data-test="dish">
+                            <button class="food btn-2" onclick="getBtn('.btn-2', '.first')">
+                                <img src="assets/vegan burger.jpeg" alt="" srcset="">
+                                <h3 data-test="item-name" class="name">Hambúguer Vegano</h3>
+                                <p>Cebola Fritada, Soja, Alface e Pão Integral</p>
+                                <h5 data-test="item-price" class="price">25,75</h5>
+                            </button>
+                        </div>
+                        <div data-test="dish">
+                            <button class="food btn-3" onclick="getBtn('.btn-3', '.first')">
+                                <img src="assets/main course-2.jpeg" alt="" srcset="">
+                                <h3 data-test="item-name" class="name">Bife com Arroz</h3>
+                                <p>Carne, Ervilha, com Torta de Arroz</p>
+                                <h5 data-test="item-price" class="price">33,50</h5>
+                            </button>
+                        </div>
+                        <div data-test="dish">
+                            <button class="food btn-4" onclick="getBtn('.btn-4', '.first')">
+                                <img src="assets/chicken plate-2.jpeg" alt="" srcset="">
+                                <h3 data-test="item-name" class="name">Prato de Frango</h3>
+                                <p>Frango Assado</p>
+                                <h5 data-test="item-price" class="price">43,25</h5>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,7 +161,8 @@
                 <h3 class="name">TOTAL</h3>
                 <h5 class="price"></h5>
             </div>
-            <button data-test="confirm-order-btn" class="confirm-order-button" onclick="confirmOrder()">Tudo certo, pode pedir!</button>
+            <button data-test="confirm-order-btn" class="confirm-order-button" onclick="confirmOrder()">Tudo certo, pode
+                pedir!</button>
             <button data-test="cancel-order-btn" class="cancel-order-button" onclick="cancelOrder()">Cancelar</button>
         </div>
     </div>
