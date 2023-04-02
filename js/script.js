@@ -69,10 +69,10 @@ function confirmOrder() {
     - Prato: ${confirm_order.querySelector('.first .name').textContent}
     - Bebida: ${confirm_order.querySelector('.second .name').textContent}
     - Sobremesa: ${confirm_order.querySelector('.third .name').textContent}
-    Total: R$ ${confirm_order.querySelector('.order-total .price').textContent}
     
     Nome: ${prompt('nome')}
-    Endereço: ${prompt('endereço')}`;
+    Endereço: ${prompt('endereço')}
+    Total: R$ ${confirm_order.querySelector('.order-total .price').textContent}`;
     
     // A test without the tag a
     window.open(`https://wa.me/?text=${encodeURIComponent(order_message)}`);
