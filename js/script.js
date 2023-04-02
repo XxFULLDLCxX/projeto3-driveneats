@@ -71,8 +71,8 @@ function confirmOrder() {
     - Sobremesa: ${confirm_order.querySelector('.third .name').textContent}
     Total: R$ ${confirm_order.querySelector('.order-total .price').textContent}
     
-    Nome: ${prompt('Your name: ')}
-    Endereço: ${prompt('Your address: ')}`;
+    Nome: ${prompt('nome')}
+    Endereço: ${prompt('endereço')}`;
     
     // A test without the tag a
     window.open(`https://wa.me/?text=${encodeURIComponent(order_message)}`);
