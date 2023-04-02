@@ -65,13 +65,15 @@ function cancelOrder() {
 }
 
 function confirmOrder() {
+    let name = prompt('nome');
+    let address = prompt('endereço')
     order_message = `Olá, gostaria de fazer o pedido:
     - Prato: ${confirm_order.querySelector('.first .name').textContent}
     - Bebida: ${confirm_order.querySelector('.second .name').textContent}
     - Sobremesa: ${confirm_order.querySelector('.third .name').textContent}
     
-    Nome: ${prompt('nome')}
-    Endereço: ${prompt('endereço')}
+    Nome: ${name}
+    Endereço: ${address}
     Total: R$ ${confirm_order.querySelector('.order-total .price').textContent}`;
     
     // A test without the tag a
