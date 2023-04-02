@@ -108,7 +108,6 @@ p {
     padding-bottom: 10px;
     overflow-x: scroll;
     gap: 16px;
-    background-color: skyblue;
 }
 
 /* .food-choices div::-webkit-scrollbar {
