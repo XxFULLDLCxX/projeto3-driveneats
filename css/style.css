@@ -34,7 +34,7 @@ body {
     width: 100%;
     /* max-width: 414px; */
     position: fixed;
-    z-index: 999;
+    z-index: 3;
 }
 
 /* Os estilos adicionais estão dispostos abaixo, em ordem de estruturação do HTML. */
@@ -136,7 +136,7 @@ p {
     margin: 8px 4px;
 }
 
-.food h3 {
+.food .name {
     color: #333333;
     font-size: 16px;
     font-weight: 700;
@@ -160,7 +160,11 @@ p {
 
 }
 
-.food h5 {
+.food .price::before {
+    content: "R$ ";
+}
+
+.food .price {
     color: #000000;
     font-size: 16px;
     font-weight: 400;
@@ -222,4 +226,112 @@ footer div button {
     line-height: 23px;
     letter-spacing: 0.018em;
     text-align: center;
+}
+
+.confirm-order {
+    background: #FFFFFFE5;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.confirm-order-modal {
+    background-color: #50D074;
+    height: 353px;
+    width: 377px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px #00000040;
+    flex-direction: column;
+    padding: 0 25px;
+}
+
+.confirm-order h2 {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    height: 27px;
+    margin: 21px 0 28px;
+
+}
+
+.confirm-order-modal > div {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    height: 27px;
+    margin-bottom: 13px;
+}
+
+.confirm-order-modal .name, 
+.confirm-order-modal .price {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    text-align: left;
+    height: 100%;
+}
+
+.confirm-order-modal .name {
+    width: 100%;
+}
+
+.confirm-order-modal .price {
+    text-align: right;
+}
+
+.order-total .name,
+.order-total .price {
+    font-weight: 700;
+    width: inherit;
+}
+
+.order-total .price::before {
+    content: "R$ ";
+}
+
+.confirm-order-button {
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    text-align: center;
+
+    height: 52px;
+    width: 329px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 100px;
+    border: none;
+    background-color: #FFFFFF;
+
+    margin: 11px 0 0;
+}
+
+.cancel-order-button {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    text-align: center;
+
+    height: 52px;
+    width: 329px;
+    border: none;
+    background-color: #50D074;
+
+}
+
+.finish {
+    display: none;
 }
